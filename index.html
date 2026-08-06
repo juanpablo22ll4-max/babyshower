@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#9bd3e2" />
+  <title>Baby Shower de Sebastián</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="invitation">
+
+    <!-- PORTADA -->
+    <section class="screen cover-screen is-active" id="cover-screen">
+      <div class="cloud cloud-one"></div>
+      <div class="cloud cloud-two"></div>
+      <div class="cloud cloud-three"></div>
+
+      <div class="balloon balloon-one"><b></b><i></i></div>
+      <div class="balloon balloon-two"><b></b><i></i></div>
+
+      <div class="stars cover-stars" aria-hidden="true">
+        <i>✦</i><i>✦</i><i>✦</i><i>✦</i>
+      </div>
+
+      <p class="eyebrow">Tienes una invitación especial</p>
+
+      <div class="moon" aria-hidden="true"><span>☾</span></div>
+
+      <div class="teddy-scene" aria-hidden="true">
+        <span class="sparkle">✦</span>
+        <span class="teddy">🧸<b>✦</b></span>
+      </div>
+
+      <p class="celebrate">Estás cordialmente invitado(a) al</p>
+      <h1>Sebastián</h1>
+
+      <div class="divider"><span></span><b>✦</b><span></span></div>
+
+      <p class="baby-shower">Baby Shower</p>
+      <p class="invite-copy">Ven a celebrar la llegada de nuestro pequeño príncipe</p>
+
+      <button class="enter-button" id="open-details" type="button">
+        Abrir invitación <span>→</span>
+      </button>
+
+      <p class="footer">Una aventura dulce está por comenzar</p>
+    </section>
+
+    <!-- INFORMACIÓN -->
+    <section class="screen details-screen" id="details-screen">
+      <button class="back-button" id="back-cover" type="button" aria-label="Volver a la portada">
+        ←
+      </button>
+
+      <div class="stars detail-stars" aria-hidden="true">
+        <i>✦</i><i>✦</i><i>✦</i>
+      </div>
+
+      <div class="detail-top">
+        <span>☾</span>
+        <p>Baby Shower de</p>
+        <h2>Sebastián</h2>
+      </div>
+
+      <p class="welcome">
+        La vida nos regaló un pequeño milagro.<br />
+        Nos encantaría celebrar contigo.
+      </p>
+
+      <section class="event-details">
+        <article>
+          <span class="icon">📅</span>
+          <div>
+            <small>CUÁNDO</small>
+            <strong>20 de diciembre</strong>
+          </div>
+        </article>
+
+        <article>
+          <span class="icon">◷</span>
+          <div>
+            <small>A QUÉ HORA</small>
+            <strong>Hora por confirmar</strong>
+          </div>
+        </article>
+
+        <article>
+          <span class="icon">⌖</span>
+          <div>
+            <small>DÓNDE</small>
+            <strong>589 Redwood Road</strong>
+            <em>Bolingbrook</em>
+          </div>
+        </article>
+      </section>
+
+      <section class="rsvp">
+        <div class="little-bears" aria-hidden="true">🧸 <span>🧸</span></div>
+
+        <p>¿Nos acompañas a celebrar?</p>
+
+        <button class="confirm-button" id="confirm-button" type="button">
+          Sí, ¡ahí estaré! <span>↗</span>
+        </button>
+
+        <button class="decline-button" id="decline-button" type="button">
+          No podré asistir
+        </button>
+
+        <p class="note">Tu respuesta se abrirá lista en WhatsApp.</p>
+      </section>
+
+      <p class="contact">
+        ¿Dudas? Escríbenos al
+        <a href="tel:+16308194415">(630) 819-4415</a>
+      </p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
