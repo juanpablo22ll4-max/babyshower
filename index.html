@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -47,7 +47,7 @@
       <p class="invite-copy">Ven a celebrar la llegada de nuestro pequeño príncipe</p>
 
       <button class="enter-button" id="open-details" type="button">
-        Abrir invitación <span>→</span>
+        Abrir invitación
       </button>
 
       <p class="footer">Una aventura dulce está por comenzar</p>
@@ -91,15 +91,20 @@
           </div>
         </article>
 
-        <article>
-          <span class="icon">⌖</span>
-          <div>
-            <small>DÓNDE</small>
-            <strong>589 Redwood Road</strong>
-            <em>Bolingbrook</em>
-          </div>
-        </article>
-      </section>
+       <a
+    href="https://www.google.com/maps/search/?api=1&query=589+Redwood+Road%2C+Bolingbrook%2C+IL"
+    target="_blank"
+    rel="noopener"
+    style="display:flex; align-items:center; gap:15px; padding:16px 18px; color:#315269; background:#fffdf8; text-decoration:none;"
+  >
+    <span style="font-size:25px;">⌖</span>
+    <span>
+      <small style="display:block; color:#b38648; font-size:11px;">DÓNDE — TOCA PARA ABRIR EL MAPA</small>
+      <strong style="display:block; margin-top:4px;">589 Redwood Road</strong>
+      <span style="font-size:14px; color:#7f9198;">Bolingbrook</span>
+    </span>
+  </a>
+</section>
 
       <section class="rsvp">
         <div class="little-bears" aria-hidden="true">🧸 <span>🧸</span></div>
@@ -107,7 +112,7 @@
         <p>¿Nos acompañas a celebrar?</p>
 
         <button class="confirm-button" id="confirm-button" type="button">
-          Sí, ¡ahí estaré! <span>↗</span>
+          Sí, ¡ahí estaré!
         </button>
 
         <button class="decline-button" id="decline-button" type="button">
