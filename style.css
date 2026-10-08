@@ -1,0 +1,612 @@
+/* CONFIGURACIÓN GENERAL */
+
+:root {
+    --pink: #d995aa;
+    --light-pink: #ffe5ed;
+    --soft-pink: #fff0f4;
+    --rose: #b9788e;
+    --cream: #fffaf6;
+    --text: #78555e;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    overflow-x: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* PANTALLA INICIAL */
+
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at top left, #ffe0e9, transparent 45%),
+        radial-gradient(circle at bottom right, #f5c5d4, transparent 45%),
+        #fff7f9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.welcome-content {
+    animation: fadeUp 1.5s ease;
+}
+
+.welcome-bear {
+    font-size: 100px;
+    animation: bearFloat 3s infinite ease-in-out;
+}
+
+.welcome-content p {
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.welcome-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(65px, 12vw, 105px);
+    color: var(--rose);
+    font-weight: normal;
+}
+
+.welcome-content span {
+    display: block;
+    font-size: 14px;
+    margin: 15px 0 35px;
+}
+
+.welcome-content button {
+    border: none;
+    background: var(--pink);
+    color: white;
+    padding: 16px 35px;
+    border-radius: 40px;
+    font-size: 14px;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px #d995aa66;
+}
+
+.welcome-content button:hover {
+    background: var(--rose);
+    transform: translateY(-4px);
+}
+
+
+/* PORTADA */
+
+.hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(circle at 15% 20%, #ffe0ea, transparent 35%),
+        radial-gradient(circle at 85% 80%, #f7d1dd, transparent 35%),
+        linear-gradient(180deg, #fff8fa, #ffeaf0);
+}
+
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1.5s ease;
+}
+
+.small-title {
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.bear-decoration {
+    font-size: 120px;
+    margin: 25px 0;
+    animation: bearFloat 4s infinite ease-in-out;
+}
+
+.hero h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(70px, 12vw, 110px);
+    font-weight: normal;
+    color: var(--rose);
+}
+
+.of-text {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;
+    font-size: clamp(75px, 13vw, 120px);
+    color: #bd7d93;
+    line-height: 1.2;
+}
+
+.divider {
+    color: var(--pink);
+    margin: 25px 0;
+    font-size: 22px;
+}
+
+.hero-message {
+    font-size: 16px;
+    max-width: 380px;
+    margin: auto;
+    line-height: 2;
+}
+
+.scroll-text {
+    margin-top: 55px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    opacity: 0.75;
+}
+
+
+/* FLORES FLOTANTES */
+
+.floating-flower {
+    position: absolute;
+    font-size: 32px;
+    opacity: 0.5;
+    animation: flowerFloat 6s infinite ease-in-out;
+}
+
+.flower1 {
+    top: 15%;
+    left: 10%;
+}
+
+.flower2 {
+    top: 35%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.flower3 {
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 4s;
+}
+
+
+/* SECCIONES GENERALES */
+
+section:not(.hero) {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: var(--rose);
+    font-size: clamp(30px, 6vw, 43px);
+    margin-bottom: 25px;
+}
+
+section p {
+    font-size: 15px;
+    line-height: 2;
+}
+
+.section-subtitle {
+    letter-spacing: 3px;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+.section-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+/* MENSAJE */
+
+.message-section {
+    background: var(--cream);
+}
+
+.section-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 60px 35px;
+    background: white;
+    border: 1px solid #f5d9e1;
+    border-radius: 180px 180px 25px 25px;
+    box-shadow: 0 20px 50px #d995aa20;
+}
+
+.section-card p {
+    margin-bottom: 20px;
+}
+
+.section-card h3 {
+    font-family: 'Great Vibes', cursive;
+    color: var(--rose);
+    font-size: 40px;
+    margin-top: 30px;
+    font-weight: normal;
+}
+
+
+/* FECHA */
+
+.date-section {
+    background: var(--soft-pink);
+}
+
+.date-card {
+    background: white;
+    width: min(100%, 350px);
+    margin: 40px auto 0;
+    padding: 45px 25px;
+    border-radius: 170px 170px 25px 25px;
+    box-shadow: 0 15px 35px #d995aa33;
+    border: 1px solid #f2d6df;
+}
+
+.month {
+    font-size: 20px;
+    letter-spacing: 8px;
+}
+
+.date-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    color: var(--rose);
+    line-height: 1.3;
+}
+
+.year {
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.date-line {
+    width: 80px;
+    height: 1px;
+    background: var(--pink);
+    margin: 25px auto;
+}
+
+.event-time {
+    font-size: 20px;
+}
+
+
+/* CUENTA REGRESIVA */
+
+.countdown-section {
+    background: white;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.time-box {
+    width: 105px;
+    min-height: 110px;
+    padding: 20px 10px;
+    background: var(--soft-pink);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #f5d9e1;
+}
+
+.time-box span {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: var(--rose);
+}
+
+.time-box small {
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+
+/* UBICACIÓN */
+
+.location-section {
+    background: var(--cream);
+}
+
+.location-section > p {
+    margin-bottom: 35px;
+}
+
+.location-card {
+    max-width: 460px;
+    margin: auto;
+    background: white;
+    border-radius: 20px;
+    padding: 45px 25px;
+    box-shadow: 0 15px 40px #d995aa22;
+}
+
+.location-card h3 {
+    color: var(--rose);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.location-card p {
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 40px;
+    background: var(--pink);
+    color: white;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--rose);
+    transform: translateY(-3px);
+}
+
+
+/* REGALOS */
+
+.gifts-section {
+    background: linear-gradient(180deg, #ffedf2, #fff8fa);
+}
+
+.gift-decoration {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.gifts-section p {
+    max-width: 480px;
+    margin: 0 auto 20px;
+}
+
+.btn-gift {
+    display: inline-block;
+    background: white;
+    border: 1px solid var(--pink);
+    color: var(--rose);
+    padding: 16px 25px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-gift:hover {
+    background: var(--pink);
+    color: white;
+}
+
+
+/* RSVP */
+
+.rsvp-section {
+    background: white;
+}
+
+.rsvp-section > p {
+    max-width: 450px;
+    margin: auto;
+}
+
+.rsvp-card {
+    max-width: 430px;
+    margin: 40px auto 0;
+    padding: 35px;
+    border-radius: 20px;
+    background: var(--soft-pink);
+    text-align: left;
+}
+
+.rsvp-card label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.rsvp-card input,
+.rsvp-card select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #efced8;
+    border-radius: 10px;
+    outline: none;
+    background: white;
+    font-family: inherit;
+}
+
+.rsvp-card input:focus,
+.rsvp-card select:focus {
+    border-color: var(--rose);
+}
+
+.rsvp-card button {
+    width: 100%;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 100px 25px 50px;
+    background: linear-gradient(180deg, #ffeaf0, #f7d6e1);
+}
+
+.footer-bear {
+    font-size: 90px;
+    margin-bottom: 20px;
+}
+
+footer h2 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;
+    font-size: 65px;
+    color: var(--rose);
+}
+
+footer p {
+    max-width: 420px;
+    margin: 20px auto;
+    line-height: 2;
+    font-size: 14px;
+}
+
+footer h1 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;
+    font-size: 70px;
+    color: var(--rose);
+}
+
+.footer-divider {
+    margin: 30px 0;
+}
+
+footer small {
+    font-size: 11px;
+}
+
+
+/* ANIMACIONES */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bearFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes flowerFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(15deg);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* DISEÑO MÓVIL */
+
+@media (max-width: 600px) {
+
+    section:not(.hero) {
+        padding: 75px 20px;
+    }
+
+    .bear-decoration {
+        font-size: 95px;
+    }
+
+    .hero h1 {
+        font-size: 75px;
+    }
+
+    .hero h2 {
+        font-size: 70px;
+    }
+
+    .section-card {
+        padding: 55px 25px;
+    }
+
+    .time-box {
+        width: 75px;
+        min-height: 90px;
+    }
+
+    .time-box span {
+        font-size: 28px;
+    }
+
+    .rsvp-card {
+        padding: 25px;
+    }
+
+}
